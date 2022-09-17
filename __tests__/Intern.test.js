@@ -1,4 +1,4 @@
-// const Employee = require("../lib/Employee");
+// import Intern file to test
 const Intern = require("../lib/Intern");
 
 test("creates the object", () => {
