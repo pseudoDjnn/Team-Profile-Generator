@@ -47,7 +47,7 @@ const createManager = () => {
       {
         type: "input",
         name: "email",
-        message: "Please enter the manager's email.",
+        message: "Please enter the associated email.",
         validate: (email) => {
           valid = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email);
           if (valid) {
@@ -112,12 +112,26 @@ const createEmployee = () => {
       {
         type: "input",
         name: "id",
-        message: "Please enter the employye ID:",
+        message: "Please enter the employee ID:",
         validate: (idValidate) => {
           if (isNaN(idValidate)) {
             console.log("Please give valid ID:");
           } else {
             return true;
+          }
+        },
+      },
+      {
+        type: "input",
+        name: "email",
+        message: "Please enter the manager's email.",
+        validate: (email) => {
+          valid = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email);
+          if (valid) {
+            return true;
+          } else {
+            console.log("Please enter an email!");
+            return false;
           }
         },
       },
