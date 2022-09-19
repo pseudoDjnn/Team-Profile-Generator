@@ -138,7 +138,7 @@ const createEmployee = () => {
       {
         type: "input",
         name: "github",
-        message: "Does this employee have a github account?",
+        message: "Does this employee have a github account? Please list if so.",
         when: (input) => input.role === "Engineer",
         validate: (githubValidate) => {
           if (githubValidate) {
@@ -214,8 +214,8 @@ createManager()
   .then((teamArray) => {
     return template(teamArray);
   })
-  .then((generatePageHTML) => {
-    return writeFile(generatePageHTML);
+  .then((pages) => {
+    return writeFile(pages);
   })
   .catch((err) => {
     console.log(err);
