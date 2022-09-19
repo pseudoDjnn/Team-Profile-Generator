@@ -214,6 +214,9 @@ createManager()
   .then((teamArray) => {
     return template(teamArray);
   })
+  .then((generatePageHTML) => {
+    return writeFile(generatePageHTML);
+  })
   .catch((err) => {
     console.log(err);
   });
