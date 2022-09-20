@@ -8,7 +8,6 @@ const template = require("./src/template");
 
 // Constructor classes
 const Manager = require("./lib/Manager");
-// const Employee = require("./lib/Employee");
 const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
 
@@ -138,7 +137,8 @@ const createEmployee = () => {
       {
         type: "input",
         name: "github",
-        message: "Does this employee have a github account? Please list if so.",
+        message:
+          "Does this employee have a github account? Github 404 will prompt if there is none.",
         when: (input) => input.role === "Engineer",
         validate: (githubValidate) => {
           if (githubValidate) {
