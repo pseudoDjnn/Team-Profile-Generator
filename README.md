@@ -12,7 +12,7 @@ A template design to collect personal information about a team based on the invd
 
 [Sample_Link](./dist/index.html)
 
-[Walkthrough_Video]
+[Walkthrough_Video](https://drive.google.com/file/d/1nz0GpranZuvAhH97FvH9JTYnpw85tG3b/view)
 
 # Table of Contents
 
