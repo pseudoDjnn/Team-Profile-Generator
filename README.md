@@ -14,6 +14,8 @@ A template design to collect personal information about a team based on the invd
 
 [Walkthrough_Video](https://drive.google.com/file/d/1nz0GpranZuvAhH97FvH9JTYnpw85tG3b/view)
 
+![Screenshot (23)](https://user-images.githubusercontent.com/105378214/191569377-4e0ab125-0a24-4008-bbbf-ef7bec0e4c18.png)
+
 # Table of Contents
 
 - [Installation](#installation)
