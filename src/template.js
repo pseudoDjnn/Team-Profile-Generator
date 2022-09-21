@@ -1,8 +1,8 @@
-// Export function to generate HTML page
+// Export function to generate htmlPage page
 module.exports = (team) => {
   return `
-  <!DOCTYPE html>
-  <html lang="en">
+  <!DOCTYPE htmlPage>
+  <htmlPage lang="en">
   <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -32,14 +32,14 @@ module.exports = (team) => {
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-  </html>
+  </htmlPage>
 `;
 };
 
 // Create Team Profile
 const createProfile = (team) => {
   // Create Manager Profile
-  const createManager = (manager) => {
+  const createManagerCard = (manager) => {
     return `
         <div class="card employee-card manager-card">
             <div class="card-header text-center">
@@ -60,7 +60,7 @@ const createProfile = (team) => {
   };
 
   // Create Engineer Profile
-  const createEngineer = (engineer) => {
+  const createEngineerCard = (engineer) => {
     return `
         <div class="card employee-card engineer-card">
             <div class="card-header text-center">
@@ -83,7 +83,7 @@ const createProfile = (team) => {
   };
 
   // Create Intern Profile
-  const createIntern = (intern) => {
+  const createInternCard = (intern) => {
     return `
         <div class="card employee-card intern-card">
             <div class="card-header text-center">
@@ -101,25 +101,25 @@ const createProfile = (team) => {
         `;
   };
 
-  const html = [];
+  const htmlPage = [];
 
-  html.push(
+  htmlPage.push(
     team
       .filter((employee) => employee.getRole() === "Manager")
-      .map((manager) => createManager(manager))
+      .map((manager) => createManagerCard(manager))
   );
-  html.push(
+  htmlPage.push(
     team
       .filter((employee) => employee.getRole() === "Engineer")
-      .map((engineer) => createEngineer(engineer))
+      .map((engineer) => createEngineerCard(engineer))
       .join("")
   );
-  html.push(
+  htmlPage.push(
     team
       .filter((employee) => employee.getRole() === "Intern")
-      .map((intern) => createIntern(intern))
+      .map((intern) => createInternCard(intern))
       .join("")
   );
 
-  return html.join("");
+  return htmlPage.join("");
 };

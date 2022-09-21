@@ -3,7 +3,7 @@ body {
 }
 
 a {
-  color: #540b0e;
+  color: #7f383b;
   text-decoration: none;
 }
 
@@ -25,14 +25,14 @@ a:hover {
   margin: 1em;
   max-width: 300px;
   width: 100%;
-  color: white;
+  color: #252525;
   display: flex;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
   border: none;
 }
 
 .manager-card {
-  background-color: #540b0e;
+  background-color: #7f383b;
 }
 
 .engineer-card {
