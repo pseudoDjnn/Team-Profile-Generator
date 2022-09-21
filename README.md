@@ -1,6 +1,6 @@
 # Team Profile Generator
 
-![license](https://img.shields.io/badge/license--yellowgreen.svg)
+![license](https://img.shields.io/badge/license-MIT-yellowgreen.svg)
 
 ## Description
 
